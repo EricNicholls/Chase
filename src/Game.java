@@ -260,7 +260,7 @@ public class Game {
 			}
 		}
 		// top is valid move
-		if (y + 1 <= (length-1) ) 	
+		if (y+1<= (length-1) ) 	
 		{
 			if (Math.abs(arr[x][y+1]) < 1 ) 
 			{
@@ -309,7 +309,6 @@ public class Game {
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
@@ -345,6 +344,8 @@ public class Game {
 	private void gameOver ()
 	{
 		String winnerColor;
+		
+		
 		if (blacksTurn) {
 			StdDraw.clear(red);
 			winnerColor = "RED";
@@ -353,11 +354,7 @@ public class Game {
 			StdDraw.clear(Color.BLACK);
 			winnerColor = "BLACK";
 		}
-		
-		StdDraw.setPenColor(Color.WHITE);
-		StdDraw.setFont();
-		StdDraw.setPenRadius(1.3);
-		StdDraw.text(50, 55, "GAME OVER, " + winnerColor + " WINS (in " + turn + " turns)");
+		System.out.println("Black Win: " + !blacksTurn);
 		
 		try {
 			TimeUnit.SECONDS.sleep(10);
