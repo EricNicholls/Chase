@@ -5,3 +5,4 @@ src/.classpath
 src/.project
 *.class
 .DS_Store
+bin/Game.class

@@ -69,6 +69,8 @@ public class Game {
 	
 	public void newTurn () {
 		
+		printMatrix(arr);
+		
 		drawBoardState ();		
 		
 		if (!hasValidMove ()) {
@@ -311,6 +313,20 @@ public class Game {
 		return false;
 	}
 	
+	private void printMatrix (int [][] array) {
+		StringBuilder sb = new StringBuilder ("[");
+		
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				sb.append(array[i][j]);
+			}
+			sb.append("\n");
+		}
+		
+		sb.append("]");
+		
+	}
+	
 	private boolean waitingForConfirmed (int xR, int yR, int xB, int yB) {
 		while (!StdDraw.isKeyPressed (KeyEvent.VK_ENTER)) {
 			if (StdDraw.isKeyPressed(KeyEvent.VK_SPACE)) {
@@ -385,9 +401,6 @@ public class Game {
 		
 		
 		StdDraw.setPenColor(StdDraw.BLACK);
-		
-		
-		
 	}
 	
 	public void drawBoardState () {
