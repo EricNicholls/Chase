@@ -4,3 +4,4 @@ bin/.project
 src/.classpath
 src/.project
 *.class
+.DS_Store
