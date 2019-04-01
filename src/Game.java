@@ -324,7 +324,7 @@ public class Game {
 		}
 		
 		sb.append("]");
-		
+		System.out.println(sb.toString());
 	}
 	
 	private boolean waitingForConfirmed (int xR, int yR, int xB, int yB) {
