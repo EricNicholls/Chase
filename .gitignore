@@ -1,0 +1,6 @@
+
+bin/.classpath
+bin/.project
+src/.classpath
+src/.project
+*.class
